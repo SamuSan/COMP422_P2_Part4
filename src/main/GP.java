@@ -139,8 +139,8 @@ import examples.gp.symbolicRegression.XorD;
  * @since 3.5
  */
 public class GP extends GPProblem {
-    private transient static Logger LOGGER = Logger
-            .getLogger(GP.class);
+//    private transient static Logger LOGGER = Logger
+//            .getLogger(GP.class);
 
 	/*
 	 * public variables which may be changed by configuration file
@@ -1004,7 +1004,7 @@ public class GP extends GPProblem {
         // Log to stdout instead of file
         // -----------------------------
         // org.apache.log4j.PropertyConfigurator.configure("log4j.properties");
-        LOGGER.addAppender(new ConsoleAppender(new SimpleLayout(), "System.out"));
+//        LOGGER.addAppender(new ConsoleAppender(new SimpleLayout(), "System.out"));
         //
         // Read a configuration file, or not...
         //
@@ -1188,12 +1188,12 @@ public class GP extends GPProblem {
         long elapsedTime = endTime - startTime;
         System.out.println("\nTotal time " + elapsedTime + "ms");
 
-        readFile(args[1]);
+     //   readFile(args[1]);
         FormulaFitnessFunction f = new FormulaFitnessFunction();
         double testSetResult = f.computeRawFitness(fittest);
         System.out.println("Fitness of best solution over test set:" + testSetResult);
 
-        System.exit(0);
+//        System.exit(0);
     }
 
     /**
@@ -1243,7 +1243,7 @@ public class GP extends GPProblem {
                     // rate.
                     // -------------------------------------------------------------------
 
-                    if (result <= 0 && data[outputVariable][j] == 4) {
+                    if (result <= 0 && data[outputVariable][j] == 1) {
                         error++;
                     } else if (result >= 0 && data[outputVariable][j] == 2) {
                         error++;
