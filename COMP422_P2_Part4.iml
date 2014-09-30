@@ -11,6 +11,7 @@
     <orderEntry type="library" name="jgap-examples" level="project" />
     <orderEntry type="library" name="log4j" level="project" />
     <orderEntry type="library" name="commons-lang-2.1" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
 

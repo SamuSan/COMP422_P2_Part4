@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+jar{
+    manifest{
+        attributes 'Main-Class' : 'main.java.Main'
+
+    }
+
+}
+dependencies{
+    compile fileTree( dir: 'src/lib', include: '*.jar')
+    runtime fileTree(dir:'src/lib', include: '*.jar')
+}
+
+task copyJars(type: Copy){
+    from ('src/lib')
+    include ('*.jar')
+    into ('build/libs')
+
+}
+compileJava.dependsOn(copyJars)

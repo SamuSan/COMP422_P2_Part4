@@ -1,4 +1,4 @@
-package main;
+package main.java;
 
 /*
  * This file is part of JGAP.
@@ -13,7 +13,6 @@ package main;
 import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -21,9 +20,6 @@ import java.util.HashMap;
 
 import javax.swing.tree.TreeNode;
 
-import org.apache.log4j.ConsoleAppender;
-import org.apache.log4j.Logger;
-import org.apache.log4j.SimpleLayout;
 import org.jgap.InvalidConfigurationException;
 import org.jgap.gp.CommandGene;
 import org.jgap.gp.GPFitnessFunction;
@@ -313,6 +309,8 @@ public class GP extends GPProblem {
         }
         if (useADF) {
         } else {
+            System.out.println("");
+
         }
         // Next, we define the set of available GP commands and terminals to
         // use.

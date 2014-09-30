@@ -1,2 +1,5 @@
 .idea/
-lib/*.jar
+resources/*.jar
+.gradle/
+build/
+COMP422_P2_Part4.iml
